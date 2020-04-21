@@ -10,7 +10,8 @@
           <img class="miniature"
             src="./assets/placeholder_profil.jpg"
             :alt="auteur">
-          <h3> {{ auteur }} </h3> 
+          <h3> {{ auteur }} </h3>
+          <h3 v-if="auteur !== auteurs[auteurs.length - 1]">, </h3> 
         </a>
       </div>
       <a href="#" class="ouvrage"> <h3> {{ ouvrage }} </h3> </a>
