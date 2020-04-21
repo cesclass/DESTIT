@@ -11,3 +11,20 @@
 .image {
     grid-row: 1 / 3;
 }
+
+.miniature {
+    border-radius: 50%;
+    max-width: 2rem;
+    max-height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.auteurs, .auteur {
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+
+.auteurs h3 {
+    margin: auto;
+}

@@ -5,12 +5,14 @@
       :alt="titre">
     <div class="presentation">
       <a href="#" class="titre"> <h2> {{ titre }} </h2> </a>
-      <a href="#" class="auteur" v-for="auteur in auteurs"> <h3>
-        <img class="miniature"
-          src="./assets/placeholder_profil.jpg"
-          :alt="auteur">
-         {{ auteur }} 
-      </h3> </a>
+      <div class="auteurs">
+        <a href="#" class="auteur" v-for="auteur in auteurs">
+          <img class="miniature"
+            src="./assets/placeholder_profil.jpg"
+            :alt="auteur">
+          <h3> {{ auteur }} </h3> 
+        </a>
+      </div>
       <a href="#" class="ouvrage"> <h3> {{ ouvrage }} </h3> </a>
       <h3 class="date"> {{ date }} </h3>
     </div>
