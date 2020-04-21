@@ -4,10 +4,10 @@
       src="./assets/placeholder.png" 
       :alt="titre">
     <div class="presentation">
-      <a href="#" class="titre"> {{ titre }} </a>
-      <a href="#" class="auteur"> {{ auteur }} </a>
-      <a href="#" class="ouvrage"> {{ ouvrage }} </a>
-      <div class="date"> {{ date }} </div>
+      <a href="#" class="titre"> <h2> {{ titre }} </h2> </a>
+      <a href="#" class="auteur"> <h3> {{ auteur }} </h3> </a>
+      <a href="#" class="ouvrage"> <h3> {{ ouvrage }} </h3> </a>
+      <h3 class="date"> {{ date }} </h3>
     </div>
     <div class="apercu"> {{ apercu }} </div>
   </article>
@@ -45,5 +45,4 @@ export default {
 </script>
 
 <style src="../css/publication.css">
-
 </style>

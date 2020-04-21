@@ -1,0 +1,32 @@
+:root {
+    --grey:         #9da5af;
+    --blue:         #82aadc;
+    --white:        #ddd;
+    --black:        #222;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+a, a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+h2 {
+    color: var(--blue);
+}
+
+h3 {
+    color: var(--grey);
+}
+
+img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--grey);
+    max-width: 220px;
+    max-height: 220px;
+}
