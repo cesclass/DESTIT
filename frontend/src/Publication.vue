@@ -1,8 +1,11 @@
 <template>
   <article class="publication">
-    <img class="image"
-      src="./assets/placeholder_img.png" 
-      :alt="titre">
+    <div class="bord_gauche">
+      <h3>DESTIT publication</h3>
+      <img class="image"
+        src="./assets/placeholder_img.png" 
+        :alt="titre">
+    </div>
     <div class="presentation">
       <a href="#" class="titre"> <h2> {{ titre }} </h2> </a>
       <div class="auteurs">
@@ -15,7 +18,7 @@
         </a>
       </div>
       <div class="ouvrage">
-        <a href="#" class="nom_ouvrage"> <h3> {{ ouvrage }}&thinsp; </h3> </a>
+        <a href="#" class="nom_ouvrage"> <h3> {{ ouvrage }},&thinsp; </h3> </a>
         <h3 class="date"> {{ date }} </h3>
       </div>
     </div>
@@ -29,6 +32,7 @@ export default {
     return {
       titre: "Ma nouvelle publication",
       auteurs: ["Dylan Caron", "Cyril Esclassan", "Florian Azizen", "Nicolas Augier"],
+      type: "conference",
       ouvrage: "The best conference ever",
       date: "29/47/53",
       resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus eros sed leo consequat molestie. Aenean nec tellus mollis, viverra sapien quis, feugiat mi. Nulla ipsum purus, pharetra eget fermentum ut, imperdiet vitae leo. Phasellus ut gravida mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel erat sollicitudin, sollicitudin sapien at, faucibus odio. Suspendisse potenti. Integer posuere nisi eget viverra euismod. Aliquam neque odio, faucibus sit amet mollis vel, lacinia quis nisi. Proin iaculis sodales est a tristique. Integer a nisi non purus lobortis mattis at sed lectus. Nullam magna neque, aliquam sed fermentum ut, aliquet vel enim. Maecenas lacinia ante in vulputate porttitor. Maecenas et ultrices dui, vel consequat ligula. Nam ac suscipit lacus. Pellentesque efficitur molestie velit, quis mollis nibh varius eu."
