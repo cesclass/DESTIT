@@ -5,10 +5,13 @@
     --black:        #222;
 }
 
+
+
 body {
     background-color: var(--black);
     color: var(--white);
     margin: 0;
+    font-family: sans-serif;
 }
 
 a, a:visited {
@@ -18,10 +21,15 @@ a, a:visited {
 
 h2 {
     color: var(--blue);
+    font-size: 24px;
+    margin: 15px 0;
 }
 
 h3 {
     color: var(--grey);
+    font-weight: normal;
+    font-size: 24px;
+    margin: 15px 0;
 }
 
 img {
