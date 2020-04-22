@@ -1,8 +1,6 @@
 <template>
     <nav>
-        <appliedFilter class="applied_filter"></appliedFilter>
         <categoryFilter class="publication_filter"></categoryFilter>
-        <rangeFilter class="time_filter"></rangeFilter>
     </nav>
 </template>
 

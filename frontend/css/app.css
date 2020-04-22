@@ -61,8 +61,7 @@ img {
     justify-content: center;
 }
 
-/* Barre de recherche */
-.searching_bar{
+/* Zone de Filtre */
+.menu{
     grid-row: 1 / 11;
-    background-color: var(--grey);
 }

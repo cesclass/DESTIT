@@ -1,0 +1,28 @@
+:root {
+    --grey:         #9da5af;
+    --blue:         #82aadc;
+    --white:        #ddd;
+    --black:        #222;
+}
+
+
+.box_title {
+    color: var(--black);
+    background-color: var(--grey);
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 0.5rem;
+    width: auto;
+}
+
+.box_content {
+    background-color: var(--white);
+}
+
+.category_name {
+    color: var(--black);
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 0.5rem;
+    border-top: solid 1px var(--black);
+}

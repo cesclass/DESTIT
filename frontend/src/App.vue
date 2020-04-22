@@ -8,7 +8,7 @@
     <!-- Partie princiaple -->
     <div class="main">
       <!-- Barre de recherche -->
-      <filtreMenu></filtreMenu>
+      <filtreMenu class="menu"></filtreMenu>
       <!-- Les publications -->
       <publication></publication>
       <publication></publication>
