@@ -7,9 +7,9 @@
 
 .publication {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: minmax(auto, auto);
     grid-template-columns: 250px 1fr;
-    margin: 1.5rem;
+    margin: 0.5rem 1.5rem;
     border-bottom: solid 1px var(--grey);
     padding-bottom: 1rem;
 }
@@ -17,9 +17,14 @@
 /*  Cote gauche de la publication 
     -------------------------------
 */
-
 .bord_gauche {
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
+}
+
+.image {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--grey);
 }
 
 /*  Cote droit de la publication 
@@ -35,8 +40,8 @@
 /* Photo d'un auteur */
 .miniature {
     border-radius: 50%;
-    max-width: 2rem;
-    max-height: 2rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
     margin-right: 0.5rem;
 }
 
@@ -52,7 +57,19 @@
 }
 
 /* Aperçu du resume de la publication */
-.aperçu {
+.apercu {
     text-align: justify;
     grid-column: 2;
+}
+
+/* Liens externes */
+.liens {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin-left: 0.5rem;
 }

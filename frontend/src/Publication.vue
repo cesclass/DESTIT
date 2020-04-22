@@ -53,7 +53,7 @@ export default {
   data () {
     return {
       titre: "Ma nouvelle publication",
-      auteurs: ["Dylan Caron", "Cyril Esclassan", "Florian Azizen", "Nicolas Augier"],
+      auteurs: ["Dylan CARON", "Cyril ESCLASSAN", "Florian AZIZEN", "Nicolas AUGIER"],
       type: "conference",
       ouvrage: "The best conference ever",
       date: "29/47/53",
