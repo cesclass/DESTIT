@@ -14,14 +14,25 @@
     padding-bottom: 1rem;
 }
 
-.apercu {
-    grid-column: 2;
-}
+/*  Cote gauche de la publication 
+    -------------------------------
+*/
 
 .bord_gauche {
     grid-row: 1 / 3;
 }
 
+/*  Cote droit de la publication 
+    -------------------------------
+*/
+
+/* Zone des auteurs et leur photo */
+.auteurs, .auteur {
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+/* Photo d'un auteur */
 .miniature {
     border-radius: 50%;
     max-width: 2rem;
@@ -29,24 +40,19 @@
     margin-right: 0.5rem;
 }
 
-.auteurs, .auteur {
-    display: flex;
-    margin-right: 0.5rem;
-}
-
-
+/* Nom de l'auteur */
 .auteurs h3 {
     margin: auto;
-}
-
-.auteur{
     text-decoration: underline;
 }
 
+/* Source de la publication */
 .ouvrage {
     display: flex;
 }
 
+/* Aperçu du resume de la publication */
 .aperçu {
     text-align: justify;
+    grid-column: 2;
 }

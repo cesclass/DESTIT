@@ -1,10 +1,15 @@
 <template>
   <div id="app">
+    <!-- En-tête -->
     <header>
-      <h1>DESTIT</h1>
+      <!-- Titre principal -->
+      <h1 class="main_title">DESTIT</h1>
     </header>
+    <!-- Partie princiaple -->
     <div class="main">
+      <!-- Barre de recherche -->
       <nav class="searching_bar"></nav>
+      <!-- Les publications -->
       <publication></publication>
       <publication></publication>
       <publication></publication>
