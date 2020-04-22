@@ -37,6 +37,13 @@
     <p class="apercu"> {{ apercu }} </p>
 
     <!-- Liens externes -->
+    <div class="liens">
+      <a href="#" class="lien" v-for="lien in liens">
+        <img class="icon" 
+          :src="'./src/assets/' + lien.icon" 
+          :alt="lien.nom">
+      </a>
+    </div>
 
   </article>
 </template>
@@ -50,7 +57,12 @@ export default {
       type: "conference",
       ouvrage: "The best conference ever",
       date: "29/47/53",
-      resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus eros sed leo consequat molestie. Aenean nec tellus mollis, viverra sapien quis, feugiat mi. Nulla ipsum purus, pharetra eget fermentum ut, imperdiet vitae leo. Phasellus ut gravida mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel erat sollicitudin, sollicitudin sapien at, faucibus odio. Suspendisse potenti. Integer posuere nisi eget viverra euismod. Aliquam neque odio, faucibus sit amet mollis vel, lacinia quis nisi. Proin iaculis sodales est a tristique. Integer a nisi non purus lobortis mattis at sed lectus. Nullam magna neque, aliquam sed fermentum ut, aliquet vel enim. Maecenas lacinia ante in vulputate porttitor. Maecenas et ultrices dui, vel consequat ligula. Nam ac suscipit lacus. Pellentesque efficitur molestie velit, quis mollis nibh varius eu."
+      resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus eros sed leo consequat molestie. Aenean nec tellus mollis, viverra sapien quis, feugiat mi. Nulla ipsum purus, pharetra eget fermentum ut, imperdiet vitae leo. Phasellus ut gravida mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel erat sollicitudin, sollicitudin sapien at, faucibus odio. Suspendisse potenti. Integer posuere nisi eget viverra euismod. Aliquam neque odio, faucibus sit amet mollis vel, lacinia quis nisi. Proin iaculis sodales est a tristique. Integer a nisi non purus lobortis mattis at sed lectus. Nullam magna neque, aliquam sed fermentum ut, aliquet vel enim. Maecenas lacinia ante in vulputate porttitor. Maecenas et ultrices dui, vel consequat ligula. Nam ac suscipit lacus. Pellentesque efficitur molestie velit, quis mollis nibh varius eu.",
+      liens: [ 
+        {nom: "publication.pdf", icon: "pdf.png"},
+        {nom: "siteweb.html", icon: "html.png"},
+        {nom: "video.mp4", icon: "video.png"}
+      ]
     }
   }, 
 
