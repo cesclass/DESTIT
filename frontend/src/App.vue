@@ -8,7 +8,7 @@
     <!-- Partie princiaple -->
     <div class="main">
       <!-- Barre de recherche -->
-      <filtre></filtre>
+      <filtreMenu></filtreMenu>
       <!-- Les publications -->
       <publication></publication>
       <publication></publication>
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import filtre from "./Filtre.vue"
+import filtreMenu from "./FiltreMenu.vue"
 import publication from "./Publication.vue"
 
 export default {
   components: {
-    filtre,
+    filtreMenu,
     publication
   },
 
