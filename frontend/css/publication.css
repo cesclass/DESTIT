@@ -37,7 +37,6 @@
 
 .auteurs h3 {
     margin: auto;
-    font-weight: bold;
 }
 
 .auteur{
@@ -46,4 +45,8 @@
 
 .ouvrage {
     display: flex;
+}
+
+.aperçu {
+    text-align: justify;
 }
