@@ -1,13 +1,21 @@
 <template>
   <article class="publication">
+
+    <!-- Coté gauche de la publication (photo) -->
     <div class="bord_gauche">
       <h3>DESTIT publication</h3>
       <img class="image"
         src="./assets/placeholder_img.png" 
         :alt="titre">
     </div>
+
+    <!-- Coté droit de la publication -->
     <div class="presentation">
+
+      <!-- Titre de la publication -->
       <a href="#" class="titre"> <h2> {{ titre }} </h2> </a>
+
+      <!-- Liste des auteurs de la publication -->
       <div class="auteurs">
         <a href="#" class="auteur" v-for="auteur in auteurs">
           <img class="miniature"
@@ -17,12 +25,19 @@
           <h3 v-if="auteur !== auteurs[auteurs.length - 1]">, </h3> 
         </a>
       </div>
+
+      <!-- Source de la publication -->
       <div class="ouvrage">
         <a href="#" class="nom_ouvrage"> <h3> {{ ouvrage }},&thinsp; </h3> </a>
         <h3 class="date"> {{ date }} </h3>
       </div>
     </div>
-    <div class="apercu"> {{ apercu }} </div>
+
+    <!-- Aperçu du résumé de la publication -->
+    <p class="apercu"> {{ apercu }} </p>
+
+    <!-- Liens externes -->
+
   </article>
 </template>
 
@@ -40,6 +55,9 @@ export default {
   }, 
 
   computed: {
+    /*  N'affiche que le 100 premiers caractères du résumés
+        dans l'apercu.
+    */
     apercu () {
       const $splited = this.resume.split(' ')
       let $res = []
