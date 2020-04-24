@@ -4,7 +4,7 @@
             Filters
         </div>
         <div class="box_content">
-            <div class="categorie" v-for="cat in categories" :key="cat.name">
+            <div class="category_name" v-for="cat in categories" :key="cat.name">
                 <div class="name"> {{ cat.name }} </div>
                 <div class="show_menu"> v </div>
             </div>
