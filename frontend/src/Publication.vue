@@ -17,7 +17,7 @@
 
       <!-- Liste des auteurs de la publication -->
       <div class="auteurs">
-        <a href="#" class="auteur" v-for="auteur in auteurs">
+        <a href="#" class="auteur" v-for="auteur in auteurs" :key="auteur">
           <img class="miniature"
             src="./assets/placeholder_profil.jpg"
             :alt="auteur">
@@ -38,7 +38,7 @@
 
     <!-- Liens externes -->
     <div class="liens">
-      <a href="#" class="lien" v-for="lien in liens">
+      <a href="#" class="lien" v-for="lien in liens" :key="lien">
         <img class="icon" 
           :src="'./src/assets/' + lien.icon" 
           :alt="lien.nom">

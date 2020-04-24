@@ -4,9 +4,16 @@
             Filters
         </h4>
         <div class="box_content">
-            <div class="category_name" v-for="cat in categories" :key="cat.name">
-                <h5 class="name"> {{ cat.name }} </h5>
-                <img class="arrow" src="./assets/arrow.png">
+            <div class="category_menu" v-for="cat in categories" :key="cat.name">
+                <a href="#" class="category_name" @click.prevent="open(cat.name)">
+                    <h5> {{ cat.name }} </h5>
+                    <img class="arrow" src="./assets/arrow.png">
+                </a>
+                <div class="filters" v-if="cat.is_open">
+                    <div class="filter_tag" v-for="filter in cat.values" :key="filter">
+                        <h5> {{ filter }} </h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,54 +30,77 @@ export default {
                     "smartphone", 
                     "mobile phone",
                     "smartwatch"
-                ]
+                ],
+                is_open: false
             }, {
                 name: "input device",
                 values: [
                     "mouse",
                     "trackball",
                     "eyetracker"
-                ]
+                ],
+                is_open: false
             }, {
                 name: "disability",
                 values: [
                     "motor",
                     "visualy impaired"
-                ]
+                ],
+                is_open: false
             }, {
                 name: "method",
                 values: [
                     "key based",
                     "gesture based"
-                ]
+                ],
+                is_open: false
             }, {
                 name: "navigation",
                 values: [
                     "direct",
                     "switch scanning",
                     "indirect pointer"
-                ]
+                ],
+                is_open: false
             }, {
                 name: "selection",
                 values: [
                     "discrete",
                     "continuous"
-                ]
+                ],
+                is_open: false
             }, {
                 name: "prediction system",
-                values: []
+                values: [],
+                is_open: false
             }, {
                 name: "transformation",
-                values: []
+                values: [],
+                is_open: false
             }, {
                 name: "output",
-                values: []
+                values: [],
+                is_open: false
             }, {
                 name: "widget",
-                values: []
+                values: [],
+                is_open: false
             }
         ]
-    }}
+    }},
+
+    methods: {
+        open (cat_name) {
+            console.log(cat_name)
+            for (let i = 0; i < this.categories.length; i++) {
+                let cat = this.categories[i]
+                if (cat.name === cat_name) {
+                    cat.is_open = !cat.is_open
+                }
+                this.categories.splice(i, 1, cat)
+            }
+        }
+    }
 }
 </script>
 
