@@ -6,7 +6,7 @@
         <div class="box_content">
             <div class="category_name" v-for="cat in categories" :key="cat.name">
                 <h5 class="name"> {{ cat.name }} </h5>
-                <h5 class="show_menu"> v </h5>
+                <img src="./assets/arrow.png">
             </div>
         </div>
     </div>
