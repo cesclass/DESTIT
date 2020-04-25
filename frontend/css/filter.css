@@ -10,6 +10,7 @@
 
 .filter_box {
     color: var(--white);
+    margin-bottom: 1rem;
 }
 
 .box_title {
@@ -25,7 +26,7 @@
     background-color: var(--tgrey);
 }
 
-.category_name {
+.category_name, .box_tags {
     display: flex;
     font-weight: bolder;
     font-size: 14px;
@@ -35,16 +36,27 @@
     justify-content: space-between;
 }
 
-.arrow {
+.arrow, .cross {
     max-width: 1rem;
     max-height: 1rem;
 }
 
-.filters {
+.filters, .box_tag {
     background-color: var(--tblack);
 }
 
-.filter_tag {
+.filter_tag, .box_tag {
     padding: 1rem;
     border-top: solid 1px var(--twhite);
+}
+
+.box_tags {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.box_tag {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0.5rem;
 }

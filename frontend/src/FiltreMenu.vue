@@ -1,5 +1,6 @@
 <template>
     <nav>
+        <applied-filter></applied-filter>
         <categoryFilter class="publication_filter"></categoryFilter>
     </nav>
 </template>
