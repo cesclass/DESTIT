@@ -5,6 +5,7 @@
     --black:        #222;
     --tgrey:        rgba(157, 165, 175, 0.15);
     --twhite:       rgba(221, 221, 221, 0.15);
+    --tblack:       rgba(34,  2,   0,   0.15);
 }
 
 .filter_box {
@@ -37,4 +38,13 @@
 .arrow {
     max-width: 1rem;
     max-height: 1rem;
+}
+
+.filters {
+    background-color: var(--tblack);
+}
+
+.filter_tag {
+    padding: 1rem;
+    border-top: solid 1px var(--twhite);
 }
