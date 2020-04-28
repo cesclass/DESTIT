@@ -78,3 +78,7 @@ img {
 .menu{
     grid-row: 1 / 11;
 }
+
+.bold {
+    font-weight: bold;
+}

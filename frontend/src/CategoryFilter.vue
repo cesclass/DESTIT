@@ -6,8 +6,10 @@
         <div class="box_content">
             <div class="category_menu" v-for="cat in categories" :key="cat.name">
                 <a href="#" class="category_name" @click.prevent="open(cat.name)">
-                    <h5> {{ cat.name }} </h5>
-                    <img class="arrow" src="./assets/arrow.png">
+                    <h5 v-if="!cat.is_open"> {{ cat.name }} </h5>
+                    <h5 class="bold" v-else> {{ cat.name }} </h5>
+                    <img class="arrow" src="./assets/arrow.png" v-if="!cat.is_open">
+                    <img class="arrow" src="./assets/inverted_arrow.png" v-else>
                 </a>
                 <div class="filters" v-if="cat.is_open">
                     <div class="filter_tag" v-for="filter in cat.values" :key="filter">
