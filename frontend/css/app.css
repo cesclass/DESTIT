@@ -1,17 +1,18 @@
 :root {
     --grey:         #9da5af;
-    --blue:         #82aadc;
+    --blue:         #2c7cc0;
     --white:        #ddd;
-    --black:        #222;
-    --twhite:       rgba(221, 221, 221, 0.15);
-    --tgrey:        rgba(157, 165, 175, 0.15);
+    --black:        #1F1F1F;
+    --deep_black:   #1a1a1a;
+    --dark_grey:    #525252;
+    --deep_grey:    #333;
 }
 
 /*  Styles globaux 
     -------------------------------
 */
 header {
-    background-color: var(--twhite);
+    background-color: var(--dark_grey);
     color: var(--white);
     margin-bottom: 1rem;
 }

@@ -1,17 +1,12 @@
-:root {
-    --grey:         #9da5af;
-    --blue:         #82aadc;
-    --white:        #ddd;
-    --black:        #222;
-}
-
 .publication {
     display: grid;
     grid-auto-rows: minmax(auto, auto);
     grid-template-columns: 200px 1fr;
-    margin: 0.5rem 1.5rem;
-    border-bottom: solid 1px var(--grey);
-    padding-bottom: 1rem;
+    background-color: var(--deep_black);
+    margin: 0 1.5rem 1rem;
+    /* border-bottom: solid 1px var(--grey); */
+    /* box-shadow: 0.25rem 0.25rem 0.25rem var(--tblue); */
+    padding: 1rem;
 }
 
 /*  Cote gauche de la publication 
