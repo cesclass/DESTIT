@@ -38,7 +38,7 @@
 
     <!-- Liens externes -->
     <div class="liens">
-      <a href="#" class="lien" v-for="lien in liens" :key="lien">
+      <a href="#" class="lien" v-for="lien in liens" :key="lien.nom">
         <img class="icon" 
           :src="'./src/assets/' + lien.icon" 
           :alt="lien.nom">
