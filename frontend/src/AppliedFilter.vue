@@ -1,10 +1,13 @@
 <template>
     <div class="filter_box">
+        <!-- Titre de la zone des filtre appliquées -->
         <h4 class="box_title">
             Applied Filters
         </h4>
         <div class="box_content">
+            <!-- Zone qui contient les tags -->
             <div class="box_tags">
+                <!-- Tag -->
                 <span class="box_tag" v-for="tag in filter_tags" :key="tag.filter">
                     <h5> {{ tag.filter }} </h5>
                     &nbsp;

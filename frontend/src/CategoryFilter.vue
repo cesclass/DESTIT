@@ -1,13 +1,17 @@
 <template>
+  <!-- Zone principale -->
   <div class="filter_box">
     <h4 class="box_title">Filters</h4>
     <div class="box_content">
+      <!-- Categorie -->
       <div class="category_menu" v-for="cat in categories" :key="cat.name">
         <a href="#" class="category_name" @click.prevent="open(cat.name)">
           <h5 :class="{bold: cat.is_open}">{{ cat.name }}</h5>
+          <!-- Icon de fleche -->
           <img class="arrow" :class="{rotated: cat.is_open}" src="./assets/arrow.png" />
         </a>
         <div class="filters" v-if="cat.is_open">
+          <!-- Tag -->
           <div class="filter_tag" 
               v-for="filter in cat.values" :key="filter">
             <a href="#"

@@ -1,8 +1,10 @@
+/* Zone principale */
 .filter_box {
     color: var(--white);
     margin-bottom: 1rem;
 }
 
+/* Titre pour la zone des filtres et zone des filtres applquees*/
 .box_title {
     background-color: var(--dark_grey);
     font-weight: bolder;
@@ -11,12 +13,6 @@
     padding: 1rem;
     width: auto;
 }
-
-/*
-.box_content {
-     background-color: var(--tgrey); 
-}
-*/
 
 .category_name, .box_tags {
     display: flex;
@@ -28,11 +24,13 @@
     justify-content: space-between;
 }
 
+/* Icon de fleche */
 .arrow {
     max-width: 1rem;
     max-height: 1rem;
 }
 
+/* Icon de croix */
 .cross {
     max-width: 0.6rem;
     max-height: 0.6rem;
@@ -43,6 +41,7 @@
     background-color: var(--deep_black);
 }
 
+/* Tag */
 .filter_tag, .box_tag {
     padding: 1rem;
     border-top: solid 1px var(--deep_grey);
@@ -53,6 +52,7 @@
     justify-content: flex-start;
 }
 
+/* Tag */
 .box_tag {
     display: flex;
     flex-wrap: wrap;
