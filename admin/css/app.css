@@ -1,0 +1,89 @@
+:root {
+    --grey:         #9da5af;
+    --blue:         #2c7cc0;
+    --white:        #ddd;
+    --black:        #1F1F1F;
+    --deep_black:   #1a1a1a;
+    --dark_grey:    #525252;
+    --deep_grey:    #333;
+}
+
+/*  Styles globaux 
+    -------------------------------
+*/
+header {
+    background-color: var(--dark_grey);
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Lien et Lien visite */
+a, a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+h2 {
+    color: var(--blue);
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: var(--grey);
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+}
+
+img {
+    max-width: 180px;
+    max-height: 180px;
+}
+
+/*  Styles des classes
+    -------------------------------
+*/
+
+/* Titre principal */
+.main_title{
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Partie princiaple */
+.main {
+    display: grid;
+    grid-template-columns: minmax(auto, 350px) minmax(auto, 1000px);
+    grid-template-rows: repeat(10, 1fr);
+    justify-content: center;
+}
+
+/* Zone de Filtre */
+.menu{
+    grid-row: 1 / 11;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
