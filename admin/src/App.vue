@@ -9,6 +9,11 @@
           :cat="category">
       </formulaire>
     </div>
+
+    <footer>
+      <input type="submit" value="Valider" class="submit">
+      <input type="reset" value="Annuler" class="reset">
+    </footer>
   </div>
 </template>
 

@@ -11,65 +11,50 @@ h5 {
     text-align: center;
 }
 
-/* class utiliser pour les checkbox */
+/* Footer du corps du formulaire */
+footer {
+    display: flex;
+    grid-column: 2;
+    justify-content: space-around;
+    margin: 1rem 33% 1rem 33%;
+}
+
+/* classe utiliser pour les checkbox */
 .checkbox {
     margin-right: 1rem;
     
+}
+
+/* Classes pour les boutons de validation et boutons de reinitialisation */
+.submit, .reset {
+    color: var(--white);
+    background-color: var(--dark_grey);
+    border: none;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 7rem;
 }
 
 /*  Styles des classes
     -------------------------------
 */
 
+/* L'elem lui même */
+.form {
+    margin-bottom: 1rem;
+}
+
 /* Corps du formulaire */
-.main_formulaire {
-    display: grid;
-    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
-    grid-template-rows: repeat(11, 1fr);
-}
-
-/* Zone centrale du corps du formulaire */
-.center_area {
-    grid-column: 2 / 3;
-    grid-row: 1 / 12;
-}
-
-/* Zone pour une catégorie */
-.categorie_area {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 0 0 1rem 1rem;
-}
-
-/* Zone qui contient les tags d'une catégorie */
-.flex_area {
-    display: flex;
-    flex-direction: column;
-    border: solid var(--deep_grey) 1px;
-    padding: 1rem;
+.main_form {
+    margin: auto;
+    max-width: 750px;
 }
 
 /* Tag */
-.formulaire_tag {
+.tag {
     display: flex;
     grid-column: 1 / 2;
     padding: 0.5rem;
-}
-
-/* Footer du corps du formulaire */
-.end_main_formulaire {
-    display: flex;
-    grid-column: 2;
-    justify-content: space-around;
-    margin: 1rem 0 1rem 1rem;
-}
-
-/* Bouton de validation et bouton de reinitialisation */
-.submit, .reset {
-    color: var(--white);
-    background-color: var(--dark_grey);
-    border: none;
-    padding: 0.5rem;
-    font-size: 1rem;
-    width: 7rem;
 }
