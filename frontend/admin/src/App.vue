@@ -4,25 +4,21 @@
       <h1 class="main_title">DESTIT</h1>
     </header>
 
-    <div class="main_form">
-      <formulaire v-for="category in categories" :key="category.name"
-          :cat="category">
-      </formulaire>
-    </div>
+    <authorForm
+      :title='"Add a researcher"'
+      :description='"Please, complete the identity of the new author"'
+      :data='author'>
+    </authorForm>
 
-    <footer>
-      <input type="submit" value="Valider" class="submit">
-      <input type="reset" value="Annuler" class="reset">
-    </footer>
   </div>
 </template>
 
 <script>
-import formulaire from "./Form.vue"
+import authorForm from "./AuthorForm.vue"
 
 export default {
   components: {
-    formulaire
+    authorForm
   }, 
 
   name: 'app',
@@ -90,11 +86,24 @@ export default {
           is_open: false,
           exclusive: false
         }
-      ]
+      ],
+
+      author: {
+        identity: {
+          firstname: "",
+          lastname: ""
+        }, 
+        mail: "",
+        photo: "",
+        url: ""
+      }
     };
   }
 }
 </script>
 
-<style src="../css/app.css">
+<style>
+  body {
+    background-color: black;
+  }
 </style>
