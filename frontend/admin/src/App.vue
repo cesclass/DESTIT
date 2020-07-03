@@ -1,24 +1,39 @@
 <template>
-  <div class="formulaire">
+<!-- ANCHOR - TEMPLATE -->
+  <div class="main">
     <header>
       <h1 class="main_title">DESTIT</h1>
     </header>
 
-    <authorForm
-      :title='"Add a researcher"'
-      :description='"Please, complete the identity of the new author"'
-      :data='author'>
-    </authorForm>
+    <!-- admin panel -->
+    <div class="admin_panel">
+      
+      <adminPanel></adminPanel>
+
+    </div>
+
+    <!-- author form -->
+    <div class="author_form"
+      hidden>
+
+      <addForm
+        :type="'author'">
+      </addForm>
+
+    </div>
 
   </div>
 </template>
 
 <script>
-import authorForm from "./AuthorForm.vue"
+// ANCHOR - SCRIPT
+import adminPanel from "./AdminPanel.vue"
+import addForm from "./AddForm.vue"
 
 export default {
   components: {
-    authorForm
+    adminPanel,
+    addForm
   }, 
 
   name: 'app',
@@ -103,7 +118,11 @@ export default {
 </script>
 
 <style>
+/* ANCHOR - STYLE */
   body {
+    color: white;
+
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
   }
 </style>
