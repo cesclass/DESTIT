@@ -4,6 +4,20 @@
 
     <div class="addForm-top">
 
+      <div class="addForm-header">
+
+        <img class="addForm-icon"
+          src="./assets/return.svg" 
+          alt="return"
+          @click="previous">
+        
+        <img class="addForm-icon"
+          src="./assets/close.svg" 
+          alt="close"
+          @click="close_form">
+
+      </div>
+
       <div class="addForm-text_area">
 
         <!-- title -->
@@ -34,26 +48,16 @@
       <h2> Step {{ step }} </h2>
 
       <!-- form -->
-      <authorForm 
+      <authorForm ref="author_form"
         v-if="type ==='author'"
         :step=step>
       </authorForm>
 
-      <!-- buttons -->
-      <div class="addForm-buttons_area" 
-        hidden>
-
-        <button class="addForm-button"
-          v-on:click="step--">
-          Previous
-        </button>
-
-        <button class="addForm-button"
-          v-on:click="step++">
-          Next
-        </button>
-
-      </div>
+      <!-- button -->
+      <button class="addForm-button"
+        v-on:click="submit">
+        Submit
+      </button>
 
     </div>
     
@@ -89,9 +93,38 @@ export default {
   },
 
   methods: {
+    close_form: function () {
+      this.step = 1;
+      this.$refs.author_form.reset();
+
+      this.$emit("close_form");
+    },
+
+    update_focus: function () {
+      // 'this' cannot be used in 'setTimeout'
+      // so I save author_form before
+      const author_form = this.$refs.author_form;
+
+      // Time out is used to wait the input beeing displayed
+      setTimeout(function () {
+        author_form.update_focus();
+      }, 10);
+    },
+
     // update the current step number
     update_step: function (n) {
       this.step = n;
+      this.update_focus();
+    },
+
+    submit: function () {
+      this.step ++
+      this.update_focus();
+    }, 
+
+    previous: function () {
+      this.step --;
+      this.update_focus();
     }
   }
 }
@@ -115,6 +148,25 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
 
     box-shadow: 0 2px 2px 2px rgba(255, 255, 255, 0.2);
+  }
+
+  /* header */
+  .addForm-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+  }
+
+  /* icon */
+  .addForm-icon {
+    width: 2.5rem;
+    opacity: 0.9;
+  }
+
+  .addForm-icon:hover {
+    cursor: pointer;
   }
 
   /* bottom_area */
@@ -142,7 +194,7 @@ export default {
     width: 5rem;
     height: 3rem;
 
-    margin: 0 1rem;
+    margin-top: 1rem;
     border: none;
 
     background-color: rgb(12, 194, 158);

@@ -6,9 +6,13 @@
     </header>
 
     <!-- admin panel -->
-    <div class="admin_panel">
+    <div class="admin_panel active"
+      hidden>
       
-      <adminPanel></adminPanel>
+      <adminPanel
+        @publication_button_clicked="display_publication_form"
+        @researcher_button_clicked="display_researcher_form">
+      </adminPanel>
 
     </div>
 
@@ -17,7 +21,8 @@
       hidden>
 
       <addForm
-        :type="'author'">
+        :type="'author'"
+        @close_form="close_researcher_form">
       </addForm>
 
     </div>
@@ -113,6 +118,26 @@ export default {
         url: ""
       }
     };
+  },
+
+  methods: {
+    display_publication_form: function () {
+
+    },
+
+    display_researcher_form: function () {
+      for (const elt of document.querySelectorAll(".admin_panel, .author_form")) {
+        elt.classList.toggle("active");
+      }
+
+      document.querySelector(".authorForm-input").focus();
+    },
+
+    close_researcher_form: function () {
+      for (const elt of document.querySelectorAll(".admin_panel, .author_form")) {
+        elt.classList.toggle("active");
+      }
+    }
   }
 }
 </script>
@@ -124,5 +149,9 @@ export default {
 
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .active {
+    display: block;
   }
 </style>

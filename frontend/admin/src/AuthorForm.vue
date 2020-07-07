@@ -9,7 +9,8 @@
         name="firstname" 
         placeholder="firstname" 
         :class="{active: step === 1}"
-        v-model="researcher.firstname" 
+        v-model="researcher.firstname"
+        focus
         required
         hidden>
 
@@ -58,11 +59,11 @@
         {{ profile_picture }} 
       </div>
 
-      <input class="authorForm-photo_input"
+      <input class="authorForm-input"
         type="file" 
         id="photo"
-        :class="{active: step === 3}"
-        v-on:change="update_photo">
+        v-on:change="update_photo"
+        hidden>
 
     </div>
 
@@ -115,7 +116,23 @@ export default {
 
     // Trigger file selector when "choose file" button clicked
     open_file: function () {
-      document.querySelector('.authorForm-photo_input').click();
+      document.querySelectorAll('.authorForm-input')[3].click();
+    },
+
+    reset: function () {
+      this.researcher = {
+        firstname: "",
+        lastname: "",
+        mail: "",
+        photo: "",
+        url: ""
+      }
+    },
+
+    update_focus: function () {
+      const inputs = document.querySelectorAll('.authorForm-input');
+      
+      inputs[(this.step) * (this.step !== 1)].focus()
     }
   }
 }
@@ -149,11 +166,6 @@ export default {
   .authorForm-input:focus {
     border-color:white;
     outline: none;
-  }
-
-  /* photo_input */
-  .authorForm-photo_input {
-    display: none;
   }
 
   /* photo_description */
