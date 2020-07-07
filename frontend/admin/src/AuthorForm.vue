@@ -40,7 +40,7 @@
     
     <div class="authorForm-form flex_row">
 
-      <label class="authorForm-label"
+      <label class="authorForm-label not_selectable"
         for="photo" 
         :class="{active: step === 3}" 
         hidden>
@@ -185,6 +185,7 @@ export default {
   /* button */
   .authorForm-button {
     color: white;
+    font-weight: bold;
 
     margin: 0;
     border: none;

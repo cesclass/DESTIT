@@ -6,12 +6,12 @@
 
       <div class="addForm-header">
 
-        <img class="addForm-icon"
+        <img class="addForm-icon not_selectable"
           src="./assets/return.svg" 
           alt="return"
           @click="previous">
         
-        <img class="addForm-icon"
+        <img class="addForm-icon not_selectable"
           src="./assets/close.svg" 
           alt="close"
           @click="close_form">
@@ -54,7 +54,7 @@
       </authorForm>
 
       <!-- button -->
-      <button class="addForm-button"
+      <button class="addForm-button not_selectable"
         v-on:click="submit">
         Submit
       </button>
@@ -161,7 +161,7 @@ export default {
 
   /* icon */
   .addForm-icon {
-    width: 2.5rem;
+    width: 2rem;
     opacity: 0.9;
   }
 
@@ -190,6 +190,7 @@ export default {
   /* button */
   .addForm-button {
     color: white;
+    font-weight: bold;
 
     width: 5rem;
     height: 3rem;

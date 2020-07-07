@@ -2,7 +2,9 @@
 <!-- ANCHOR - TEMPLATE -->
   <div class="main">
     <header>
-      <h1 class="main_title">DESTIT</h1>
+      <h1 class="main_title not_selectable">
+        DESTIT
+      </h1>
     </header>
 
     <!-- admin panel -->
@@ -153,5 +155,12 @@ export default {
 
   .active {
     display: block;
+  }
+
+  .not_selectable {
+    user-select: none;
+    -moz-user-select: none;     /* Moz://a    */
+    -webkit-user-select: none;  /* webkit     */
+    -ms-user-select: none;      /* microsoft  */
   }
 </style>
