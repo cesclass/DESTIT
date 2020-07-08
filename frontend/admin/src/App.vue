@@ -18,12 +18,12 @@
 
     </div>
 
-    <!-- author form -->
-    <div class="author_form"
+    <!-- researcher form -->
+    <div class="researcher_form"
       hidden>
 
       <addForm
-        :type="'author'"
+        :type="'researcher'"
         @close_form="close_researcher_form">
       </addForm>
 
@@ -110,7 +110,7 @@ export default {
         }
       ],
 
-      author: {
+      researcher: {
         identity: {
           firstname: "",
           lastname: ""
@@ -128,15 +128,15 @@ export default {
     },
 
     display_researcher_form: function () {
-      for (const elt of document.querySelectorAll(".admin_panel, .author_form")) {
+      for (const elt of document.querySelectorAll(".admin_panel, .researcher_form")) {
         elt.classList.toggle("active");
       }
 
-      document.querySelector(".authorForm-input").focus();
+      document.querySelector(".researcherForm-input").focus();
     },
 
     close_researcher_form: function () {
-      for (const elt of document.querySelectorAll(".admin_panel, .author_form")) {
+      for (const elt of document.querySelectorAll(".admin_panel, .researcher_form")) {
         elt.classList.toggle("active");
       }
     }

@@ -1,10 +1,10 @@
 <template>
 <!-- ANCHOR - TEMPLATE -->
-  <div class="authorForm-main">
+  <div class="researcherForm-main">
 
-    <div class="authorForm-form">
+    <div class="researcherForm-form">
 
-      <input class="authorForm-input"
+      <input class="researcherForm-input"
         type="text" 
         name="firstname" 
         placeholder="firstname" 
@@ -14,7 +14,7 @@
         required
         hidden>
 
-      <input class="authorForm-input"
+      <input class="researcherForm-input"
         type="text" 
         name="lastname" 
         placeholder="lastname"
@@ -25,9 +25,9 @@
 
     </div>
 
-    <div class="authorForm-form">
+    <div class="researcherForm-form">
 
-      <input class="authorForm-input"
+      <input class="researcherForm-input"
         type="email" 
         name="mail" 
         placeholder="mail"      
@@ -38,14 +38,14 @@
 
     </div>
     
-    <div class="authorForm-form flex_row">
+    <div class="researcherForm-form flex_row">
 
-      <label class="authorForm-label not_selectable"
+      <label class="researcherForm-label not_selectable"
         for="photo" 
         :class="{active: step === 3}" 
         hidden>
 
-        <button class="authorForm-button"
+        <button class="researcherForm-button"
           type="button" 
           v-on:click.passive="open_file">
           choose file
@@ -53,13 +53,13 @@
 
       </label>
 
-      <div class="authorForm-photo_description" 
+      <div class="researcherForm-photo_description" 
         :class="{active: step === 3}" 
         hidden> 
         {{ profile_picture }} 
       </div>
 
-      <input class="authorForm-input"
+      <input class="researcherForm-input"
         type="file" 
         id="photo"
         v-on:change="update_photo"
@@ -67,9 +67,9 @@
 
     </div>
 
-    <div class="authorForm-form">
+    <div class="researcherForm-form">
 
-      <input class="authorForm-input"
+      <input class="researcherForm-input"
         :class="{active: step === 4}"
         type="url"
         placeholder="website"
@@ -116,7 +116,7 @@ export default {
 
     // Trigger file selector when "choose file" button clicked
     open_file: function () {
-      document.querySelectorAll('.authorForm-input')[3].click();
+      document.querySelectorAll('.researcherForm-input')[3].click();
     },
 
     reset: function () {
@@ -130,7 +130,7 @@ export default {
     },
 
     update_focus: function () {
-      const inputs = document.querySelectorAll('.authorForm-input');
+      const inputs = document.querySelectorAll('.researcherForm-input');
       
       inputs[(this.step) * (this.step !== 1)].focus()
     }
@@ -140,7 +140,7 @@ export default {
 
 <style>
 /* ANCHOR - STYLE */
-  .authorForm-main {
+  .researcherForm-main {
     color: white;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -148,13 +148,13 @@ export default {
   }
 
   /* form */
-  .authorForm-form {
+  .researcherForm-form {
     display: flex;
     flex-direction: column;
   }
 
   /* input */
-  .authorForm-input {
+  .researcherForm-input {
     color: white;
     height: 1.5rem;
     margin-bottom: 1rem;
@@ -163,13 +163,13 @@ export default {
     padding: 0 0.5rem;
   }
 
-  .authorForm-input:focus {
+  .researcherForm-input:focus {
     border-color:white;
     outline: none;
   }
 
   /* photo_description */
-  .authorForm-photo_description {
+  .researcherForm-photo_description {
     height: 1.5rem;
     line-height: 1.5rem;
 
@@ -177,13 +177,13 @@ export default {
   }
 
   /* label */
-  .authorForm-label {
+  .researcherForm-label {
     color: white;
     margin-bottom: calc(1rem + 2px);
   }
 
   /* button */
-  .authorForm-button {
+  .researcherForm-button {
     color: white;
     font-weight: bold;
 
@@ -196,8 +196,8 @@ export default {
     width: 8rem;
   }
 
-  .authorForm-button:hover, 
-  .authorForm-button:focus {
+  .researcherForm-button:hover, 
+  .researcherForm-button:focus {
     outline: none;
 
     border: 2px solid white;
@@ -205,9 +205,9 @@ export default {
   }
 
   /* active behaviour */
-  .authorForm-input.active, 
-  .authorForm-label.active, 
-  .authorForm-photo_description.active {
+  .researcherForm-input.active, 
+  .researcherForm-label.active, 
+  .researcherForm-photo_description.active {
     display: block;
   }
 
