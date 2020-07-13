@@ -118,13 +118,20 @@ export default {
     },
 
     submit: function () {
-      this.step ++
-      this.update_focus();
+      if (this.step < this.nb_steps) {
+        this.step ++
+        this.update_focus();
+      } else {
+        // TODO - send datas here
+      }
     }, 
 
     previous: function () {
-      this.step --;
-      this.update_focus();
+      if (this.step > 1) {
+        this.step --;
+        this.update_focus();
+      }
+      
     }
   }
 }
