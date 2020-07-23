@@ -2,7 +2,9 @@
 <!-- ANCHOR - TEMPLATE -->
   <div class="main">
     <header>
-      <h1 class="main_title">DESTIT</h1>
+      <h1 class="main_title not_selectable">
+        DESTIT
+      </h1>
     </header>
 
     <!-- admin panel -->
@@ -16,12 +18,12 @@
 
     </div>
 
-    <!-- author form -->
-    <div class="author_form"
+    <!-- researcher form -->
+    <div class="researcher_form"
       hidden>
 
       <addForm
-        :type="'author'"
+        :type="'researcher'"
         @close_form="close_researcher_form">
       </addForm>
 
@@ -108,7 +110,7 @@ export default {
         }
       ],
 
-      author: {
+      researcher: {
         identity: {
           firstname: "",
           lastname: ""
@@ -126,15 +128,15 @@ export default {
     },
 
     display_researcher_form: function () {
-      for (const elt of document.querySelectorAll(".admin_panel, .author_form")) {
+      for (const elt of document.querySelectorAll(".admin_panel, .researcher_form")) {
         elt.classList.toggle("active");
       }
 
-      document.querySelector(".authorForm-input").focus();
+      document.querySelector(".researcherForm-input").focus();
     },
 
     close_researcher_form: function () {
-      for (const elt of document.querySelectorAll(".admin_panel, .author_form")) {
+      for (const elt of document.querySelectorAll(".admin_panel, .researcher_form")) {
         elt.classList.toggle("active");
       }
     }
@@ -153,5 +155,12 @@ export default {
 
   .active {
     display: block;
+  }
+
+  .not_selectable {
+    user-select: none;
+    -moz-user-select: none;     /* Moz://a    */
+    -webkit-user-select: none;  /* webkit     */
+    -ms-user-select: none;      /* microsoft  */
   }
 </style>

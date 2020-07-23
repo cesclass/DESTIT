@@ -6,12 +6,12 @@
 
       <div class="addForm-header">
 
-        <img class="addForm-icon"
+        <img class="addForm-icon not_selectable"
           src="./assets/return.svg" 
           alt="return"
           @click="previous">
         
-        <img class="addForm-icon"
+        <img class="addForm-icon not_selectable"
           src="./assets/close.svg" 
           alt="close"
           @click="close_form">
@@ -22,13 +22,13 @@
 
         <!-- title -->
         <h1 class="addForm-title" 
-          v-if="type === 'author'"> 
+          v-if="type === 'researcher'"> 
           Add a researcher 
         </h1>
 
         <!-- description -->
         <p class="addForm-description"
-          v-if="type === 'author'"> 
+          v-if="type === 'researcher'"> 
           Please, fill in the informations about the new researcher 
         </p>
 
@@ -48,13 +48,13 @@
       <h2> Step {{ step }} </h2>
 
       <!-- form -->
-      <authorForm ref="author_form"
-        v-if="type ==='author'"
+      <researcherForm ref="researcher_form"
+        v-if="type ==='researcher'"
         :step=step>
-      </authorForm>
+      </researcherForm>
 
       <!-- button -->
-      <button class="addForm-button"
+      <button class="addForm-button not_selectable"
         v-on:click="submit">
         Submit
       </button>
@@ -67,20 +67,20 @@
 <script>
 // ANCHOR - SCRIPT
 import stepDisplay from "./StepDisplay.vue"
-import authorForm from "./AuthorForm.vue"
+import researcherForm from "./ResearcherForm.vue"
 
 export default {
   props: ['type'],
 
   components: {
     stepDisplay,
-    authorForm
+    researcherForm
   },
 
   computed: {
     // Compute nb steps depending on form type
     nb_steps: function () {
-      if (this.type === "author") return 4;
+      if (this.type === "researcher") return 4;
 
       return -1;
     }
@@ -95,19 +95,19 @@ export default {
   methods: {
     close_form: function () {
       this.step = 1;
-      this.$refs.author_form.reset();
+      this.$refs.researcher_form.reset();
 
       this.$emit("close_form");
     },
 
     update_focus: function () {
       // 'this' cannot be used in 'setTimeout'
-      // so I save author_form before
-      const author_form = this.$refs.author_form;
+      // so I save researcher_form before
+      const researcher_form = this.$refs.researcher_form;
 
       // Time out is used to wait the input beeing displayed
       setTimeout(function () {
-        author_form.update_focus();
+        researcher_form.update_focus();
       }, 10);
     },
 
@@ -118,13 +118,20 @@ export default {
     },
 
     submit: function () {
-      this.step ++
-      this.update_focus();
+      if (this.step < this.nb_steps) {
+        this.step ++
+        this.update_focus();
+      } else {
+        // TODO - send datas here
+      }
     }, 
 
     previous: function () {
-      this.step --;
-      this.update_focus();
+      if (this.step > 1) {
+        this.step --;
+        this.update_focus();
+      }
+      
     }
   }
 }
@@ -161,7 +168,7 @@ export default {
 
   /* icon */
   .addForm-icon {
-    width: 2.5rem;
+    width: 2rem;
     opacity: 0.9;
   }
 
@@ -190,6 +197,7 @@ export default {
   /* button */
   .addForm-button {
     color: white;
+    font-weight: bold;
 
     width: 5rem;
     height: 3rem;

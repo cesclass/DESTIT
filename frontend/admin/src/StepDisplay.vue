@@ -11,13 +11,13 @@
         :class="{done: n < step, active: n === step}"
         v-on:click="update_step(n)">
 
-        <span class="stepDisplay-step_digit"
+        <span class="stepDisplay-step_digit not_selectable"
           :class="{done: n < step}">
           {{ n }}
         </span>
 
-        <img class="stepDisplay-check_icon" 
-          src="./assets/check.png" 
+        <img class="stepDisplay-check_icon not_selectable" 
+          src="./assets/check.svg" 
           alt="check_icon"
           :class="{done: n < step}"
           hidden>
@@ -39,13 +39,13 @@
       }"
       v-on:click="update_step(nb_steps)">
 
-      <span class="stepDisplay-step_digit" 
+      <span class="stepDisplay-step_digit not_selectable" 
         :class="{done: nb_steps < step}"> 
         {{ nb_steps }} 
       </span>
 
-      <img class="stepDisplay-check_icon" 
-        src="./assets/check.png" 
+      <img class="stepDisplay-check_icon not_selectable" 
+        src="./assets/check.svg" 
         alt="done"
         :class="{done: nb_steps < step}"
         hidden>
