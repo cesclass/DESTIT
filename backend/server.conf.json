@@ -1,0 +1,29 @@
+{
+  "admin":{
+    "password":"jMp4ja*a"
+  },
+  "database":{
+    "host":"127.0.0.1",
+    "port":3306,
+    "name":"DESTIT_DB",
+    "reader":{
+      "username":"reader",
+      "password":"+F9K7MOT%S8g_qO4"
+    },
+    "writer":{
+      "username":"writer",
+      "password":"ibH@jwN0^Dr37Fmq"
+    }
+  },
+  "server":{
+    "logs":{
+      "error":"./serverlogs/error.log",
+      "access":"./serverlogs/access.log"
+    },
+    "ports":{
+      "users":10080,
+      "admin":10090
+    },
+    "document_root":"../frontend/"
+  }
+}
